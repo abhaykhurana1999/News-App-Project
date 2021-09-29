@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;width:100%; 
+background-color: url("https://videohive.img.customer.envatousercontent.com/files/1f3f8772-1998-4ec1-b6db-ebe47ce8f001/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=1ed833d58f81f39e4fd6fcb314ad1444");}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.new{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center ;
+}

@@ -1,0 +1,28 @@
+h2{
+    text-align: center;
+    color: brown;
+}
+.box{
+    padding: 10px 10px;
+    background-color:blanchedalmond;
+
+}
+.box h5{
+    font-size: 15px;
+}
+.login{
+   
+    /* The image used */
+  background-image: url("../../assets/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+    background: red;
+  }

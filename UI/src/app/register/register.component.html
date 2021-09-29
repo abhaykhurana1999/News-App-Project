@@ -1,0 +1,65 @@
+<section class="login">
+  <div *ngIf="msg" class="box2">
+    <dialog open  >
+     <p>welcome!!  Successfully Registered!! </p>
+         <a type="submit" value="ok" data-dismiss="modal" routerLink="/login" routerLinkActive="active">ok</a>
+  </dialog>
+  </div>
+<div class="box" >
+    <form  [formGroup]="loginForm" (ngSubmit)="save()"> 
+      <div >
+        <h1  style="margin-left:5em">Please Register Yourself!!!</h1><br/>
+           <label ><b><h2>UserName:</h2></b></label>
+           <input type="text" class="form-control" name="username" id="exampleInputUserName"  formControlName="username" 
+           placeholder="Your UserName please....." required>
+          <small *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+          UserName is a Required field  </small></div><br/><br/><br/>
+          <div>
+            <label ><b><h2>Name:</h2></b></label>
+            <input type="text" class="form-control" name="name" id="exampleInputName"  formControlName="name" 
+            placeholder="Your Name please....." required>
+           <small *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+           Name is a Required field   </small>
+          </div><br/><br/><br/>
+          <div>
+            <label ><b><h2>Role:</h2></b></label>
+            <input type="text" class="form-control" name="role" id="role"  formControlName="role" 
+            placeholder="Your role please....." required>
+           <small *ngIf="role?.invalid && (role?.dirty || name?.touched)">
+           Name is a Required field   </small>
+          </div><br/><br/><br/>
+       <div >
+        <label ><b><h2>Email address:</h2></b></label>
+        <input type="email" class="form-control" name="email" id="exampleInputEmail1"  formControlName="email" aria-describedby="emailHelp" 
+        placeholder="Your email id please....." required>
+       <small *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        Email is a Required field   </small>
+        
+      </div><br/><br/><br/>
+      <div class="form-group">
+        <label for="exampleInputPassword1"><b><h2>Password:</h2></b></label>
+        <input type="password" class="form-control"name="password" id="exampleInputPassword1"  formControlName="password"
+         placeholder="Your password please......." required>
+         <small *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+         password is a Required field
+        </small>
+      </div><br/><br/><br/>
+     <div >
+        <button type="submit" [disabled]='!loginForm.valid' [style.background-color]="toggle ? 'blue':'red' "class="btn btn-primary" >Register Me</button><br/>
+     <!-- <div *ngIf="msg" class="box">
+         <dialog open class="box2" >
+          <p>welcome!!  Successfully Registered!! </p>
+          <button class="button" type="button"  data-dismiss="modal" aria-label="Close"><a routerLink="/login" routerLinkActive="active">close</a></button>
+       </dialog>
+       </div>--> 
+         <br/>  <h4  style="margin-left:10em"  >Already have an Account?<a routerLink="/login" routerLinkActive="active"><i>Log In</i></a></h4>
+    </div>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  </form>
+</div>
+</section>
+  
+    
+    
+    
+ 

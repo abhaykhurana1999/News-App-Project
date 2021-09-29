@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+<!--
+working one
+-->
+
+
+<section class="login" >
+  <div *ngIf="message" class="box2">
+    <dialog open  >
+     <p>Log in Successfully !!! </p>
+         <a type="submit" value="ok" data-dismiss="modal" routerLink="/headline" routerLinkActive="active">ok</a>
+  </dialog>
+  </div>
+<div class="box" >
+<form  [formGroup]="loginForm" (ngSubmit)="signIn()" > 
+
+  <div >
+    <!--<h1>Please Login Yourself!!!</h1>--><br/><br/><br/><br/>
+       <label ><b><h2>UserName:</h2></b></label>
+       <input type="text" class="form-control" name="username" id="exampleInputUserName"  formControlName="username" 
+       placeholder="Your UserName please....." required>
+      <small *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+      UserName is a Required field   </small></div><br/><br/><br/>
+   <div class="form-group">
+    <label for="exampleInputPassword1"><b><h2>Password:</h2></b></label>
+    <input type="password" class="form-control"name="password" id="exampleInputPassword1"  formControlName="password"
+     placeholder="Your password please......." required>
+     <small *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+     password is a Required field
+    </small>
+  </div><br/><br/><br/>
+ <div >
+  <button type="submit"  class="btn btn-primary" [style.background-color]="toggle ? 'blue':'red' ">Log in</button><br/>
+
+  <br/>  
+  <h3 style="margin-left:10em" >  Don't have an account?? <a routerLink="/register" routerLinkActive="active"><i>Create One</i></a></h3>
+</div>
+ 
+</form>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+

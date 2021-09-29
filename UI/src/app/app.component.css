@@ -1,0 +1,7 @@
+.hero{
+    background-image: url('/desktop/inline_image_preview.jpg')
+    !important;
+    background-size: cover;
+    background-position: center;
+
+}
